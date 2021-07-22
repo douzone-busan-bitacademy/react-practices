@@ -27,11 +27,11 @@
         |--- node-modules
         |--- public
         |       |--- index.html
-        |       |--- bundle.js
+        |       |--- main.js
         |--- src
         |       |--- index.js
         |       |--- App.js
-        |--- dev-server   
+        |--- dev-server.mjs   
     <pre>
 3. scripts
 ```json
