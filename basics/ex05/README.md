@@ -70,9 +70,3 @@ $ npm run build
 ```bash
 $ npm start
 ```
-
-6. 테스트 서버 실행
-```bash
-$ npm start
-```
-
