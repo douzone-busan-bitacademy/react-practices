@@ -43,6 +43,34 @@
             "presets": [
                 ["@babel/preset-env", {
                     "targets": {
+                        "node": "current"
+                    }
+                }]
+            ],
+            "plugins": [
+                "@babel/plugin-transform-block-scoping",
+                "@babel/plugin-transform-parameters",
+                "@babel/plugin-transform-template-literals",
+                "@babel/plugin-transform-for-of"
+            ]
+        }    
+        ```
+
+    -   변환
+        ```bash
+        $ npx babel src/ex01.js -o dist/ex01.03.js
+        ```
+
+
+3.  브라우저 타켓 설정[babel.config.json]
+    [브라우저별 ES6호환 테이블](https://kangax.github.io/compat-table/es6/) 참고해서 설정한다.
+
+    -   설정
+        ```json
+        {
+            "presets": [
+                ["@babel/preset-env", {
+                    "targets": {
                         "ie": "11",
                         "edge": "89",
                         "firefox": "92",
@@ -59,8 +87,4 @@
         ```bash
         $ npx babel src/ex01.js -o dist/ex01.03.js
         ```
-
-
-3.  브라우저 타켓 설정[babel.config.json]
-    [브라우저별 ES6호환 테이블](https://kangax.github.io/compat-table/es6/) 참고해서 설정한다.
 
