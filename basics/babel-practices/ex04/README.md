@@ -43,6 +43,7 @@
             "presets": [
                 ["@babel/preset-env", {
                     "targets": {
+                        "ie": "11",
                         "edge": "89",
                         "firefox": "92",
                         "chrome": "90",
