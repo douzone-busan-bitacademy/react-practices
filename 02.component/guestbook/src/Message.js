@@ -7,10 +7,10 @@ export default function Message({ no, name, message }) {
             <strong>{ name }</strong>
             <p>
                 { message && message.split('\n').map((line, index) => index > 0 ?
-                    <span key={`${no}-${index}`}>
+                    <Fragment key={`${no}-${index}`}>
                         <br/>
                         { line }
-                    </span> : line) }
+                    </Fragment> : line) }
             </p>
             <strong/>
             <a href=''>삭제</a>
