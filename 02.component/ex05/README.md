@@ -13,11 +13,17 @@
     - *componentDidUpdate:  DOM 업데이트가 끝난 직 후, DOM 작업이 가능하다.
 
 3.  Unmount LifeCycle
-    - componentWillUnmount: 컴포넌트가 DOM에서 사라질 때
-    
+    - *componentWillUnmount: 컴포넌트가 DOM에서 사라질 때
+
 4.  예제: src/01
 
-## Function Component LifeCycle
-1. 대체(Alternative) <-   
+## Function Component LifeCycle: Hook 함수
+1. Alternative 1: getDerivedStateFromProps
+2. After Rendering 함수( 상태에 변화 -> 렌더링 -> 함수) 
+3. 어떤 특정 값의 변화에 반응하는 After Rendering 함수 (어떤 특정 상태값이 변화 -> 렌더링 -> 함수)
+4. Alternative 2: componentDidMount
+5. Alternative 3: componentDidUpdate
+6. Alternative 4: componentWillUnmount
+
  
   
