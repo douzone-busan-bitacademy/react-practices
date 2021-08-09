@@ -4,13 +4,11 @@ import Clock from './Clock';
 
 export default function App() {
     const [state, setState] = useState({
-        count: 0,
+        count: 1,
         hours: '00',
         minutes: '00',
         seconds: '00'
     });
-
-    console.log(state);
 
     useEffect(() => {
         setTimeout(function () {
@@ -28,7 +26,7 @@ export default function App() {
         }, 1000);
     });
 
-    return ( state.count === 100000 ?
+    return ( state.count % 10 === 0 ?
                 null :
                 <Clock
                     message={'ex05: useEffect Hook example'}
