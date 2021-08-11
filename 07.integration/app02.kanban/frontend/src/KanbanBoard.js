@@ -55,7 +55,7 @@ export default function KanbanBoard() {
                 }
                 
                 const cardIndex = cards.findIndex((card) => card.no === cardNo);
-                
+ 
                 const newCards = update(cards, {
                     [cardIndex]: {
                         tasks: {
