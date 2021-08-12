@@ -56,6 +56,7 @@ export default function App() {
                 </div>
                 <div className={ styles['modal-dialog-buttons'] }>
                     <button onClick={ () => {
+                        // refForm.current.submit();
                         refForm.current.dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
                     } }>확인</button>
                     <button onClick={ () => setModalIsOpen(false) }>취소</button>
