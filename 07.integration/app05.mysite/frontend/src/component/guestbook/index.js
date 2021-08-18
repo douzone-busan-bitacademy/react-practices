@@ -8,6 +8,11 @@ export default function Guestbook() {
     let isFetching = false;
     const [messages, _setMessages] = useState([]);
     const messagesRef = useRef(messages);
+    
+    const setMessages = function(messages) {
+        messagesRef.current = messages;
+        _setMessages(messages);
+    }
 
     useEffect(() => {
         const handleWindowScroll = function () {
@@ -16,11 +21,13 @@ export default function Guestbook() {
             const scrollTop = document.documentElement.scrollTop;
             if (viewportHeight + scrollTop + 10 > documentHeight) {
                 fetchMessage.call(this);
+                //fetchMessage();
             }
         }
 
         window.addEventListener('scroll', handleWindowScroll);
         fetchMessage.call(this);
+        //fetchMessage();
 
         return () => {
             window.removeEventListener('scroll', handleWindowScroll);
@@ -28,10 +35,6 @@ export default function Guestbook() {
 
     }, []);
 
-    const setMessages = function(messages) {
-        messagesRef.current = messages;
-        _setMessages(messages);
-    }
 
     const notifyMessage = {
         delete: function (no) {
